@@ -4,7 +4,15 @@
 
 ## Установка
 
-Требования: Joomla 6, PHP 8.3 или новее. Установите ZIP из [Releases](https://github.com/shivayanamahom/plg_system_dharma_sitescripts/releases) через менеджер расширений Joomla, затем включите плагин «Dharma Site Scripts». Настройте фрагменты в его параметрах. Обновления доступны через стандартное обновление расширений Joomla.
+Требования: Joomla 6, PHP 8.3 или новее.
+
+В Joomla откройте **Система → Установка → Расширения → «Установить по URL-адресу»** и вставьте ссылку на последнюю версию:
+
+```text
+https://github.com/shivayanamahom/plg_system_dharma_sitescripts/releases/latest/download/plg_system_dharma_sitescripts.zip
+```
+
+Также можно скачать версионный ZIP из [Releases](https://github.com/shivayanamahom/plg_system_dharma_sitescripts/releases) и загрузить его через менеджер расширений. После установки включите плагин «Dharma Site Scripts» и настройте фрагменты. Обновления доступны через стандартное обновление расширений Joomla.
 
 ## Использование
 
