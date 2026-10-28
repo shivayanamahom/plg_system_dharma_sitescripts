@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="6.0" type="plugin" group="system" method="upgrade">
+	<name>Dharma Site Scripts</name>
+	<author>Dharma Design</author>
+	<creationDate>2026-09</creationDate>
+	<copyright>(C) 2026 Dharma Design</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0.0</version>
+	<description>Добавляет произвольные коды счётчиков, чатов и аналитики перед закрывающими тегами head и body.</description>
+	<namespace path="src">Joomla\Plugin\System\DharmaSiteScripts</namespace>
+	<files>
+		<folder plugin="dharmasitescripts">services</folder>
+		<folder>src</folder>
+		<filename>LICENSE</filename>
+	</files>
+	<updateservers>
+		<server type="extension" name="Dharma Site Scripts Updates">https://raw.githubusercontent.com/shivayanamahom/plg_system_dharma_sitescripts/main/updates.xml</server>
+	</updateservers>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="Коды сайта">
+				<field
+					name="codes"
+					type="subform"
+					label="Коды для вставки"
+					description="Добавьте код счётчика, чата или аналитики и выберите место его вставки."
+					layout="joomla.form.field.subform.repeatable-table"
+					multiple="true"
+				>
+					<form>
+						<field
+							name="name"
+							type="text"
+							label="Название"
+							description="Например: Яндекс Метрика или онлайн-чат."
+						/>
+						<field
+							name="position"
+							type="list"
+							label="Место вставки"
+							default="body"
+							filter="cmd"
+						>
+							<option value="head">Перед &lt;/head&gt;</option>
+							<option value="body">Перед &lt;/body&gt;</option>
+						</field>
+						<field
+							name="enabled"
+							type="radio"
+							label="Состояние"
+							default="1"
+							layout="joomla.form.field.radio.switcher"
+							filter="integer"
+						>
+							<option value="0">JOFF</option>
+							<option value="1">JON</option>
+						</field>
+						<field
+							name="code"
+							type="textarea"
+							label="Код"
+							rows="8"
+							filter="raw"
+						/>
+					</form>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
